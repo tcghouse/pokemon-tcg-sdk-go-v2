@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg/request"
+	"github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg/request"
 )
 
 func TestGetSets(t *testing.T) {

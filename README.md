@@ -1,10 +1,6 @@
-# PokemonTCG.io V2 SDK for Go
-
-[![CircleCI Status](https://circleci.com/gh/PokemonTCG/pokemon-tcg-sdk-go-v2.svg?style=shield)](https://github.com/PokemonTCG/pokemon-tcg-sdk-go-v2) [![Go Reference](https://pkg.go.dev/badge/github.com/PokemonTCG/pokemon-tcg-sdk-go-v2.svg)](https://pkg.go.dev/github.com/PokemonTCG/pokemon-tcg-sdk-go-v2)
-
 ## Installation
 ```sh
-go get -u github.com/PokemonTCG/pokemon-tcg-sdk-go-v2
+go get -u github.com/tcghouse/pokemon-tcg-sdk-go-v2
 ```
 
 ## Basic usage
@@ -15,8 +11,8 @@ package main
 import (
     "log"
 
-    tcg "github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg"
-    "github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg/request"
+    tcg "github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg"
+    "github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg/request"
 )
 
 func main() {
@@ -40,4 +36,4 @@ func main() {
 
 ## More Examples
 
-Check out the [Examples](https://github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/tree/main/examples) directory.
+Check out the [Examples](https://github.com/tcghouse/pokemon-tcg-sdk-go-v2/tree/main/examples) directory.

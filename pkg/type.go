@@ -3,7 +3,7 @@ package pokemontcgv2
 import (
 	"encoding/json"
 
-	"github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg/request"
+	"github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg/request"
 )
 
 func (c *apiClient) GetTypes() ([]string, error) {

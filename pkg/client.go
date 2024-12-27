@@ -3,7 +3,7 @@ package pokemontcgv2
 import (
 	"net/http"
 
-	"github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg/request"
+	"github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg/request"
 )
 
 const (
