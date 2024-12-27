@@ -74,7 +74,8 @@ type PokemonCard struct {
 		Standard  string `json:"standard" bson:"standard"`
 		Expanded  string `json:"expanded" bson:"expanded"`
 	} `json:"legalities" bson:"legalities"`
-	Images struct {
+	RegulationMark string `json:"regulationMark"`
+	Images         struct {
 		Small string `json:"small" bson:"small"`
 		Large string `json:"large" bson:"large"`
 	} `json:"images" bson:"images"`
