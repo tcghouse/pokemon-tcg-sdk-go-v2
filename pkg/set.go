@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg/request"
+	"github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg/request"
 )
 
 // A Set is a set of cards, e.g. Base Set or Sword & Shield: Vivid Voltage.

@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	tcg "github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg"
-	"github.com/PokemonTCG/pokemon-tcg-sdk-go-v2/pkg/request"
+	tcg "github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg"
+	"github.com/tcghouse/pokemon-tcg-sdk-go-v2/pkg/request"
 )
 
 func main() {
