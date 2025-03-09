@@ -9,23 +9,23 @@ import (
 
 // A Set is a set of cards, e.g. Base Set or Sword & Shield: Vivid Voltage.
 type Set struct {
-	ID           string `json:"id" bson:"id"`
-	Name         string `json:"name" bson:"name"`
-	Series       string `json:"series" bson:"series"`
-	PrintedTotal int    `json:"printedTotal" bson:"printedTotal"`
-	Total        int    `json:"total" bson:"total"`
+	ID           string `json:"id" db:"id"`
+	Name         string `json:"name" db:"name"`
+	Series       string `json:"series" db:"series"`
+	PrintedTotal int    `json:"printedTotal" db:"printedTotal"`
+	Total        int    `json:"total" db:"total"`
 	Legalities   struct {
-		Unlimited string `json:"unlimited" bson:"unlimited"`
-		Standard  string `json:"standard" bson:"standard"`
-		Expanded  string `json:"expanded" bson:"expanded"`
-	} `json:"legalities" bson:"legalities"`
-	PtcgoCode   string `json:"ptcgoCode" bson:"ptcgoCode"`
-	ReleaseDate string `json:"releaseDate" bson:"releaseDate"`
-	UpdatedAt   string `json:"updatedAt" bson:"updatedAt"`
+		Unlimited string `json:"unlimited" db:"unlimited"`
+		Standard  string `json:"standard" db:"standard"`
+		Expanded  string `json:"expanded" db:"expanded"`
+	} `json:"legalities" db:"legalities"`
+	PtcgoCode   string `json:"ptcgoCode" db:"ptcgoCode"`
+	ReleaseDate string `json:"releaseDate" db:"releaseDate"`
+	UpdatedAt   string `json:"updatedAt" db:"updatedAt"`
 	Images      struct {
-		Symbol string `json:"symbol" bson:"symbol"`
-		Logo   string `json:"logo" bson:"logo"`
-	} `json:"images" bson:"images"`
+		Symbol string `json:"symbol" db:"symbol"`
+		Logo   string `json:"logo" db:"logo"`
+	} `json:"images" db:"images"`
 }
 
 // GetSets allows you to search and filter for sets using given options.
