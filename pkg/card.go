@@ -9,121 +9,121 @@ import (
 
 // A PokemonCard represents a Pokemon card and its data.
 type PokemonCard struct {
-	ID           string   `json:"id" bson:"id"`
-	Name         string   `json:"name" bson:"name"`
-	Supertype    string   `json:"supertype" bson:"supertype"`
-	Subtypes     []string `json:"subtypes" bson:"subtypes"`
-	Level        string   `json:"level" bson:"level"`
-	Hp           string   `json:"hp" bson:"hp"`
-	Types        []string `json:"types" bson:"types"`
-	EvolvesFrom  string   `json:"evolvesFrom" bson:"evolvesFrom"`
-	EvolvesTo    []string `json:"evolvesTo" bson:"evolvesTo"`
-	Rules        []string `json:"rules" bson:"rules"`
+	ID           string   `json:"id" db:"id"`
+	Name         string   `json:"name" db:"name"`
+	Supertype    string   `json:"supertype" db:"supertype"`
+	Subtypes     []string `json:"subtypes" db:"subtypes"`
+	Level        string   `json:"level" db:"level"`
+	Hp           string   `json:"hp" db:"hp"`
+	Types        []string `json:"types" db:"types"`
+	EvolvesFrom  string   `json:"evolvesFrom" db:"evolvesFrom"`
+	EvolvesTo    []string `json:"evolvesTo" db:"evolvesTo"`
+	Rules        []string `json:"rules" db:"rules"`
 	AncientTrait *struct {
-		Name string `json:"name" bson:"name"`
-		Text string `json:"text" bson:"text"`
-	} `json:"ancientTrait" bson:"ancientTrait"`
+		Name string `json:"name" db:"name"`
+		Text string `json:"text" db:"text"`
+	} `json:"ancientTrait" db:"ancientTrait"`
 	Abilities []struct {
-		Name string `json:"name" bson:"name"`
-		Text string `json:"text" bson:"text"`
-		Type string `json:"type" bson:"type"`
-	} `json:"abilities" bson:"abilities"`
+		Name string `json:"name" db:"name"`
+		Text string `json:"text" db:"text"`
+		Type string `json:"type" db:"type"`
+	} `json:"abilities" db:"abilities"`
 	Attacks []struct {
-		Name                string   `json:"name" bson:"name"`
-		Cost                []string `json:"cost" bson:"cost"`
-		ConvertedEnergyCost int      `json:"convertedEnergyCost" bson:"convertedEnergyCost"`
-		Damage              string   `json:"damage" bson:"damage"`
-		Text                string   `json:"text" bson:"text"`
-	} `json:"attacks" bson:"attacks"`
+		Name                string   `json:"name" db:"name"`
+		Cost                []string `json:"cost" db:"cost"`
+		ConvertedEnergyCost int      `json:"convertedEnergyCost" db:"convertedEnergyCost"`
+		Damage              string   `json:"damage" db:"damage"`
+		Text                string   `json:"text" db:"text"`
+	} `json:"attacks" db:"attacks"`
 	Weaknesses []struct {
-		Type  string `json:"type" bson:"type"`
-		Value string `json:"value" bson:"value"`
-	} `json:"weaknesses" bson:"weaknesses"`
+		Type  string `json:"type" db:"type"`
+		Value string `json:"value" db:"value"`
+	} `json:"weaknesses" db:"weaknesses"`
 	Resistances []struct {
-		Type  string `json:"type" bson:"type"`
-		Value string `json:"value" bson:"value"`
-	} `json:"resistances" bson:"resistances"`
-	RetreatCost          []string `json:"retreatCost" bson:"retreatCost"`
-	ConvertedRetreatCost int      `json:"convertedRetreatCost" bson:"convertedRetreatCost"`
+		Type  string `json:"type" db:"type"`
+		Value string `json:"value" db:"value"`
+	} `json:"resistances" db:"resistances"`
+	RetreatCost          []string `json:"retreatCost" db:"retreatCost"`
+	ConvertedRetreatCost int      `json:"convertedRetreatCost" db:"convertedRetreatCost"`
 	Set                  struct {
-		ID           string `json:"id" bson:"id"`
-		Name         string `json:"name" bson:"name"`
-		Series       string `json:"series" bson:"series"`
-		PrintedTotal int    `json:"printedTotal" bson:"printedTotal"`
-		Total        int    `json:"total" bson:"total"`
+		ID           string `json:"id" db:"id"`
+		Name         string `json:"name" db:"name"`
+		Series       string `json:"series" db:"series"`
+		PrintedTotal int    `json:"printedTotal" db:"printedTotal"`
+		Total        int    `json:"total" db:"total"`
 		Legalities   struct {
-			Unlimited string `json:"unlimited" bson:"unlimited"`
-			Standard  string `json:"standard" bson:"standard"`
-			Expanded  string `json:"expanded" bson:"expanded"`
-		} `json:"legalities" bson:"legalities"`
-		PtcgoCode   string `json:"ptcgoCode" bson:"ptcgoCode"`
-		ReleaseDate string `json:"releaseDate" bson:"releaseDate"`
-		UpdatedAt   string `json:"updatedAt" bson:"updatedAt"`
+			Unlimited string `json:"unlimited" db:"unlimited"`
+			Standard  string `json:"standard" db:"standard"`
+			Expanded  string `json:"expanded" db:"expanded"`
+		} `json:"legalities" db:"legalities"`
+		PtcgoCode   string `json:"ptcgoCode" db:"ptcgoCode"`
+		ReleaseDate string `json:"releaseDate" db:"releaseDate"`
+		UpdatedAt   string `json:"updatedAt" db:"updatedAt"`
 		Images      struct {
-			Symbol string `json:"symbol" bson:"symbol"`
-			Logo   string `json:"logo" bson:"logo"`
-		} `json:"images" bson:"images"`
-	} `json:"set" bson:"set"`
-	Number                 string `json:"number" bson:"number"`
-	Artist                 string `json:"artist" bson:"artist"`
-	Rarity                 string `json:"rarity" bson:"rarity"`
-	FlavorText             string `json:"flavorText" bson:"flavorText"`
-	NationalPokedexNumbers []int  `json:"nationalPokedexNumbers" bson:"nationalPokedexNumbers"`
+			Symbol string `json:"symbol" db:"symbol"`
+			Logo   string `json:"logo" db:"logo"`
+		} `json:"images" db:"images"`
+	} `json:"set" db:"set"`
+	Number                 string `json:"number" db:"number"`
+	Artist                 string `json:"artist" db:"artist"`
+	Rarity                 string `json:"rarity" db:"rarity"`
+	FlavorText             string `json:"flavorText" db:"flavorText"`
+	NationalPokedexNumbers []int  `json:"nationalPokedexNumbers" db:"nationalPokedexNumbers"`
 	Legalities             struct {
-		Unlimited string `json:"unlimited" bson:"unlimited"`
-		Standard  string `json:"standard" bson:"standard"`
-		Expanded  string `json:"expanded" bson:"expanded"`
-	} `json:"legalities" bson:"legalities"`
+		Unlimited string `json:"unlimited" db:"unlimited"`
+		Standard  string `json:"standard" db:"standard"`
+		Expanded  string `json:"expanded" db:"expanded"`
+	} `json:"legalities" db:"legalities"`
 	RegulationMark string `json:"regulationMark"`
 	Images         struct {
-		Small string `json:"small" bson:"small"`
-		Large string `json:"large" bson:"large"`
-	} `json:"images" bson:"images"`
+		Small string `json:"small" db:"small"`
+		Large string `json:"large" db:"large"`
+	} `json:"images" db:"images"`
 	TCGPlayer *struct {
-		URL       string `json:"url" bson:"url"`
-		UpdatedAt string `json:"updatedAt" bson:"updatedAt"`
+		URL       string `json:"url" db:"url"`
+		UpdatedAt string `json:"updatedAt" db:"updatedAt"`
 		Prices    struct {
 			Holofoil *struct {
-				Low    float64 `json:"low" bson:"low"`
-				Mid    float64 `json:"mid" bson:"mid"`
-				High   float64 `json:"high" bson:"high"`
-				Market float64 `json:"market" bson:"market"`
-			} `json:"holofoil,omitempty" bson:"holofoil,omitempty"`
+				Low    float64 `json:"low" db:"low"`
+				Mid    float64 `json:"mid" db:"mid"`
+				High   float64 `json:"high" db:"high"`
+				Market float64 `json:"market" db:"market"`
+			} `json:"holofoil,omitempty" db:"holofoil,omitempty"`
 			ReverseHolofoil *struct {
-				Low    float64 `json:"low" bson:"low"`
-				Mid    float64 `json:"mid" bson:"mid"`
-				High   float64 `json:"high" bson:"high"`
-				Market float64 `json:"market" bson:"market"`
-			} `json:"reverseHolofoil,omitempty" bson:"reverseHolofoil,omitempty"`
+				Low    float64 `json:"low" db:"low"`
+				Mid    float64 `json:"mid" db:"mid"`
+				High   float64 `json:"high" db:"high"`
+				Market float64 `json:"market" db:"market"`
+			} `json:"reverseHolofoil,omitempty" db:"reverseHolofoil,omitempty"`
 			Normal *struct {
-				Low    float64 `json:"low" bson:"low"`
-				Mid    float64 `json:"mid" bson:"mid"`
-				High   float64 `json:"high" bson:"high"`
-				Market float64 `json:"market" bson:"market"`
-			} `json:"normal,omitempty" bson:"normal,omitempty"`
-		} `json:"prices" bson:"prices"`
-	} `json:"tcgplayer,omitempty" bson:"tcgplayer,omitempty"`
+				Low    float64 `json:"low" db:"low"`
+				Mid    float64 `json:"mid" db:"mid"`
+				High   float64 `json:"high" db:"high"`
+				Market float64 `json:"market" db:"market"`
+			} `json:"normal,omitempty" db:"normal,omitempty"`
+		} `json:"prices" db:"prices"`
+	} `json:"tcgplayer,omitempty" db:"tcgplayer,omitempty"`
 	CardMarket *struct {
-		URL       string `json:"url" bson:"url"`
-		UpdatedAt string `json:"updatedAt" bson:"updatedAt"`
+		URL       string `json:"url" db:"url"`
+		UpdatedAt string `json:"updatedAt" db:"updatedAt"`
 		Prices    struct {
-			AverageSellPrice *float64 `json:"averageSellPrice" bson:"averageSellPrice"`
-			LowPrice         *float64 `json:"lowPrice" bson:"lowPrice"`
-			TrendPrice       *float64 `json:"trendPrice" bson:"trendPrice"`
-			GermanProLow     *float64 `json:"germanProLow" bson:"germanProLow"`
-			SuggestedPrice   *float64 `json:"suggestedPrice" bson:"suggestedPrice"`
-			ReverseHoloSell  *float64 `json:"reverseHoloSell" bson:"reverseHoloSell"`
-			ReverseHoloLow   *float64 `json:"reverseHoloLow" bson:"reverseHoloLow"`
-			ReverseHoloTrend *float64 `json:"reverseHoloTrend" bson:"reverseHoloTrend"`
-			LowPriceExPlus   *float64 `json:"lowPriceExPlus" bson:"lowPriceExPlus"`
-			Avg1             *float64 `json:"avg1" bson:"avg1"`
-			Avg7             *float64 `json:"avg7" bson:"avg7"`
-			Avg30            *float64 `json:"avg30" bson:"avg30"`
-			ReverseHoloAvg1  *float64 `json:"reverseHoloAvg1" bson:"reverseHoloAvg1"`
-			ReverseHoloAvg7  *float64 `json:"reverseHoloAvg7" bson:"reverseHoloAvg7"`
-			ReverseHoloAvg30 *float64 `json:"reverseHoloAvg30" bson:"reverseHoloAvg30"`
-		} `json:"prices" bson:"prices"`
-	} `json:"cardmarket,omitempty" bson:"cardmarket,omitempty"`
+			AverageSellPrice *float64 `json:"averageSellPrice" db:"averageSellPrice"`
+			LowPrice         *float64 `json:"lowPrice" db:"lowPrice"`
+			TrendPrice       *float64 `json:"trendPrice" db:"trendPrice"`
+			GermanProLow     *float64 `json:"germanProLow" db:"germanProLow"`
+			SuggestedPrice   *float64 `json:"suggestedPrice" db:"suggestedPrice"`
+			ReverseHoloSell  *float64 `json:"reverseHoloSell" db:"reverseHoloSell"`
+			ReverseHoloLow   *float64 `json:"reverseHoloLow" db:"reverseHoloLow"`
+			ReverseHoloTrend *float64 `json:"reverseHoloTrend" db:"reverseHoloTrend"`
+			LowPriceExPlus   *float64 `json:"lowPriceExPlus" db:"lowPriceExPlus"`
+			Avg1             *float64 `json:"avg1" db:"avg1"`
+			Avg7             *float64 `json:"avg7" db:"avg7"`
+			Avg30            *float64 `json:"avg30" db:"avg30"`
+			ReverseHoloAvg1  *float64 `json:"reverseHoloAvg1" db:"reverseHoloAvg1"`
+			ReverseHoloAvg7  *float64 `json:"reverseHoloAvg7" db:"reverseHoloAvg7"`
+			ReverseHoloAvg30 *float64 `json:"reverseHoloAvg30" db:"reverseHoloAvg30"`
+		} `json:"prices" db:"prices"`
+	} `json:"cardmarket,omitempty" db:"cardmarket,omitempty"`
 }
 
 // GetCards allows you to search and filter for cards using given options.
